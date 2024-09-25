@@ -2,16 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HelloComponent } from './hello/hello.component';
-import { HiComponent } from './hi/hi.component';
+import { AppComponent } from './100DayOfCode/study/app.component';
 import { FormsModule } from '@angular/forms';
+import { helloComponent } from './100DayOfCode/Component/hello.component';
+import { ClassBingdingComponent } from './100DayOfCode/class-bingding/class-bingding.component';
+import { InputBingdingComponent } from './100DayOfCode/input-bingding/input-bingding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent,
-    HiComponent
+    helloComponent,
+    ClassBingdingComponent,
+    InputBingdingComponent
   ],
   imports: [
     BrowserModule,

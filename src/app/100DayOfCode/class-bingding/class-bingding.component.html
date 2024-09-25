@@ -1,0 +1,17 @@
+<div class="box" [class.red-boder] = "isDanger" [class.yellow-background] = "isWaring"></div>
+<button (click)= "isDanger = !isDanger">toggle danger</button>
+<button (click) = "isWaring = !isWaring">toggle waning</button>
+<!-- class array -->
+<div class="box" [class] = "['red-boder','yellow-background']"></div>
+<!-- class object -->
+<div class="box" [class]="{ 'red-boder': isDanger, 'yellow-background': isWaring }"></div>
+<!-- class variable -->
+<div [class] = "classes"></div>
+
+<!-- style tương tự như class -->
+<div [style.color] = "color">start editing to see some magic happen :v</div>
+<button (click) = "color = 'blue'">toggle blue</button>
+<button (click) = "color = 'green'">toggle green</button>
+
+<div [style] = "{ color : 'var(--info-color)', background : 'yellow'}" [style.--info-color] = "isDanger ? 'red': 'green'">start editing to see some magic happen :v</div>
+

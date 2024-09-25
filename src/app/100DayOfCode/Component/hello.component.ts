@@ -2,9 +2,9 @@ import { Component } from "@angular/core";
 @Component({
     selector: 'hello',
     templateUrl: './hello.component.html',
-    styleUrls: ['./hello.component.css']
+    styles: ['']
 })
-export class HelloComponent {
+export class helloComponent {
     fullname = 'Vu Thanh Duong';
 
     textType = 'text';

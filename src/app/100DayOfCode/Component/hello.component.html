@@ -1,8 +1,8 @@
 {{fullname}}
-<div>hello: {{fullname}}</div>
+<br>
 <input [type] ="textType" [value]="user.name" #userInput> //#userInput là thằng directive
+
 
 <button type = "button" (click) = "handleClick(userInput.value)">click me</button> //handleClick là thằng event (nó lấy value của thằng input directive đưa tham số vào component)
 
-<br><br>
-<input type ="text" [(ngModel)] = "userInput.value" (ngModelChange)="fullname = $event"/>//ngModel là thằng property binding, ngModelChange là thằng event binding 
+<input type ="text" [(ngModel)] = "userInput.value" (ngModelChange)="fullname = $event"/>//ngModel là thằng property binding, ngModelChange là thằng event binding

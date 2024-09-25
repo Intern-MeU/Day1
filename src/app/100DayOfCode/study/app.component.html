@@ -1,0 +1,69 @@
+
+
+<!-- day1-3
+<br><br>
+<hello></hello> -->
+
+<!-- day4 -->
+
+<!-- <br>
+<ng-template> ng-template là 1 template chứa các component không hiển thị sử dụng trước mà nó để tái sử dụng lại cho đến khi nào chỉ thị gọi nó để sử dụng hiển thị có thể thay đổi nội dung 1 cách linh hoạt mà không cần thay đổi DOM
+    <Div >noi gi do di</Div>
+</ng-template>
+
+<button (click)="user.age = user.age - 1">-</button>
+<button  (click)="user.age = user.age + 1">+</button>
+
+<hello></hello> -->
+
+<!-- day5 -->
+
+<!-- Khi sử dụng NgForOf, ở mỗi vòng lặp chúng ta sẽ có thể truy xuất đến một số local variable như:
+$implicit: T: Giá trị của phần tử trong danh sách ở lần lặp hiện tại
+index: number: index của lần lặp hiện tại
+count: number: số lượng phần tử trong danh sách
+first: boolean: True nếu đây là phần tử đầu tiên trong danh sách
+last: boolean: True nếu đây là phần tử cuối cùng trong danh sách
+even: boolean: True nếu đây là phần tử ở index chẵn
+odd: boolean: True nếu đây là phần tử ở index lẻ -->
+<!-- <ul>
+    <li *ngFor="let u of user">{{u.name}} - {{u.name}} - {{u.phone}} $implicit.first <br/></li>
+</ul>-->
+<!-- <ul>
+  <li *ngFor="let u of user; index as idx; count as total; first as isfirst; last as islast; even as isEven; odd as isOdd">
+    <span>{{u.name}} - {{u.name}} - {{u.phone}}</span>
+    {{idx}} - {{total}} - {{isfirst}} - {{islast}} <br>
+    <span>at index {{idx}} out of {{total}} </span>
+    <span *ngIf="isfirst"> I am first</span> <br>
+    <span *ngIf="islast"> I am last</span> <br>
+
+    <span> I am {{isEven ? 'even' : 'odd'}}</span>
+    <br>
+  </li>
+</ul>
+<button *ngFor="let tag of tag; last as isLast" [class.right-margin] = "!isLast">{{tag}}</button> -->
+
+<!-- cấu trúc không ngắn gọn -->
+<!-- <ul>
+  <ng-template ngFor [ngForOf] = "user" let-u let-total = "count" let-idx="index" let-first="first" let-last="last" let-even="even" let-odd="odd">
+    <li>
+      <span>{{u.name}} - {{u.name}} - {{u.phone}}</span>
+      {{idx}} - {{total}} - {{first}} - {{last}} <br>
+      <span>at index {{idx}} out of {{total}} </span>
+      <span *ngIf="first"> I am first</span> <br>
+      <span *ngIf="last"> I am last</span> <br>
+
+      <span> I am {{even ? 'even' : 'odd'}}</span>
+      <br>
+    </li>
+    <h1>xong lan {{idx}}</h1>
+  </ng-template>
+</ul> -->
+<app-input-bingding></app-input-bingding>
+<br>
+<br>
+<app-input-bingding [progess-count]="current"></app-input-bingding>
+<div>
+  <button (click)="current = current + 10">plus</button>
+  <button (click)="current = current - 10">minus</button>
+</div>
