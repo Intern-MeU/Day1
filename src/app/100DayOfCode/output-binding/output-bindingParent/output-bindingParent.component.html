@@ -1,0 +1,2 @@
+<app-output-bindingChill *ngFor="let author of authors" [author]="author"  (select) = "onSelected($event)" (delete) = "onDelete($event)"></app-output-bindingChill>
+<div>selector: {{CurrentAuthor.name}}</div>
